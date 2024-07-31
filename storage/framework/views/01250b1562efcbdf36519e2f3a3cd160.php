@@ -21,8 +21,7 @@
                     class="icon-windows"></i>Products </a>
             <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li><a href="<?php echo e(url('add_product')); ?>">Add Product</a></li>
-                <li><a href="#">Page</a></li>
-                <li><a href="#">Page</a></li>
+                <li><a href="<?php echo e(url('view_product')); ?>">View Product</a></li>
             </ul>
         </li>
 
