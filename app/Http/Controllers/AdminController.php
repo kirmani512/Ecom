@@ -84,7 +84,7 @@ class AdminController extends Controller
     }
     public function view_product()
     {
-        $product = Product::all();
+        $product = Product::paginate('10');
         return view('admin.view_product', compact('product'));
     }
 }

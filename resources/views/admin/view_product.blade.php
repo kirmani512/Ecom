@@ -26,6 +26,7 @@
         td {
             border: 1px solid skyblue;
             text-align: center;
+            color: white;
         }
     </style>
 </head>
@@ -62,7 +63,7 @@
                     @foreach ($product as $products)
                         <tr>
                             <td>{{ $products->title }}</td>
-                            <td>{{ $products->description }}</td>
+                            <td>{!!Str::limit($products->description,50git ) !!}</td>
                             <td>{{ $products->category }}</td>
                             <td>{{ $products->price }}</td>
                             <td>{{ $products->quantity }}</td>
@@ -75,7 +76,9 @@
                     @endforeach
                 </table>
             </div>
-
+            <div class="div_deg">
+                {{ $product->onEachSide(1)->links() }}
+            </div>
 
 
 
