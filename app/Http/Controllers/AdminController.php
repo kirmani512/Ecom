@@ -90,16 +90,43 @@ class AdminController extends Controller
 
     public function delete_poduct($id)
     {
-        $data=Product::find($id);
-        $image_path=public_path('products/'.$data->image);
+        $data = Product::find($id);
+        $image_path = public_path('products/' . $data->image);
 
-        if(file_exists($image_path))
-        {
+        if (file_exists($image_path)) {
             unlink($image_path);
         }
         $data->delete();
         toastr()->timeOut(5000)->closeButton()->success('Product deleted Successfully');
 
         return redirect()->back();
+    }
+    public function update_product($id)
+    {
+        $data = Product::find($id);
+        $category=Category::all();
+        return view('admin.update_product', compact('data','category'));
+    }
+    public function edit_product(Request $request, $id)
+    {
+        $data = Product::find($id);
+        $data->title = $request->title;
+        $data->description = $request->description;
+        $data->price = $request->price;
+        $data->quantity     = $request->quantity;
+        $data->category = $request->category;
+        $image = $request->image;
+
+        if ($image) {
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+
+            $request->image->move('products', $imagename);
+
+            $data->image = $imagename;
+        }
+        $data->save();
+        toastr()->timeOut(5000)->closeButton()->success('Product Updated Successfully');
+
+        return redirect('/view_product');   
     }
 }
