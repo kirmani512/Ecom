@@ -35,27 +35,37 @@
                 </li>
             </ul>
             <div class="user_option">
-                <a href="<?php echo e(url('/login')); ?>">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <span>
-                        Login
-                    </span>
-                </a>
+                <?php if(Route::has('login')): ?>
+                    <?php if(auth()->guard()->check()): ?>
+                    <a href="">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                        <form style="padding: 15px" method="POST" action="<?php echo e(route('logout')); ?>">
+                            <?php echo csrf_field(); ?>
 
-                <a href="<?php echo e(url('/register')); ?>">
-                    <i class="fa fa-vcard" aria-hidden="true"></i>
-                    <span>
-                        Register
-                    </span>
-                </a>
-                <a href="">
-                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                </a>
-                <form class="form-inline ">
-                    <button class="btn nav_search-btn" type="submit">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-                </form>
+                            <input class="btn btn-success" type="submit" value="Logout">
+                        </form>
+                    <?php else: ?>
+                        <a href="<?php echo e(url('/login')); ?>">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span>
+                                Login
+                            </span>
+                        </a>
+
+                        <a href="<?php echo e(url('/register')); ?>">
+                            <i class="fa fa-vcard" aria-hidden="true"></i>
+                            <span>
+                                Register
+                            </span>
+                        </a>
+
+
+
+                <?php endif; ?>
+                <?php endif; ?>
+
+
             </div>
         </div>
     </nav>

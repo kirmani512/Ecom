@@ -34,6 +34,9 @@
             height: 60px;
             margin-left: 50px;
         }
+        .container-fluid{
+            padding: 20px;
+        }
     </style>
 </head>
 
