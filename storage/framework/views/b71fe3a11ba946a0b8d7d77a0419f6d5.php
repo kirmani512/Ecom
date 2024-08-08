@@ -39,6 +39,8 @@
                     <?php if(auth()->guard()->check()): ?>
                     <a href="">
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                        <?php echo e($count); ?>
+
                     </a>
                         <form style="padding: 15px" method="POST" action="<?php echo e(route('logout')); ?>">
                             <?php echo csrf_field(); ?>
