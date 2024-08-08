@@ -20,7 +20,9 @@
                             </div>
 
                             <div style="padding: 15px">
-                                <a class="btn btn-primary" href="<?php echo e(url('product_details',$products->id)); ?>">Details</a>
+                                <a class="btn btn-danger" href="<?php echo e(url('product_details',$products->id)); ?>">Details</a>
+
+                                <a class="btn btn-primary" href="<?php echo e(url('add_cart',$products->id)); ?>">Add to cart</a>
                             </div>
                     </div>
                 </div>
