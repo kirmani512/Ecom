@@ -81,13 +81,29 @@ class HomeController extends Controller
     }
     public function mycart()
     {
-        if(Auth::user())
-        {
+        if (Auth::user()) {
+            $user = Auth::user();
+            $userid = $user->id;
+            $count = Cart::where('user_id', $userid)->count();
+            $cart = Cart::where('user_id', $userid)->get();
+        }
+        return view('home.mycart', compact('count', 'cart'));
+    }
+    public function remove_cart($id)
+    {
+        if (Auth::user()) {
             $user=Auth::user();
             $userid=$user->id;
-            $count=Cart::where('user_id',$userid)->count();
-            $cart=Cart::where('user_id',$userid)->get();
+
+            $cart_item=Cart::where('product_id',$id)->where('user_id',$userid)->first();
+
+            if($cart_item)
+            {
+                $cart_item->delete();
+                toastr()->timeOut(5000)->closeButton()->success('Item Removed Successfully');
+
+                return redirect()->back();
+            }
         }
-        return view('home.mycart',compact('count','cart'));
     }
 }
