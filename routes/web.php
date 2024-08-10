@@ -47,3 +47,5 @@ Route::get('/', [HomeController::class, 'home']);
 ROute::get('product_details/{id}',[HomeController::class,'product_details']);
 
 ROute::get('add_cart/{id}',[HomeController::class,'add_cart'])->middleware('auth','verified');
+
+ROute::get('mycart',[HomeController::class,'mycart'])->middleware('auth','verified');
