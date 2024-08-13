@@ -14,15 +14,21 @@
         <li>
             <a href="<?php echo e(url('view_category')); ?>">
                 <i class="icon-grid"></i>Category
-                </a>
-            </li>
+            </a>
+        </li>
 
-        <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i
-                    class="icon-windows"></i>Products </a>
+        <li>
+            <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">
+                <i class="icon-windows"></i>Products </a>
             <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                 <li><a href="<?php echo e(url('add_product')); ?>">Add Product</a></li>
                 <li><a href="<?php echo e(url('view_product')); ?>">View Product</a></li>
             </ul>
+        </li>
+        <li>
+            <a href="<?php echo e(url('view_orders')); ?>">
+                <i class="icon-grid"></i>Orders
+            </a>
         </li>
 
 </nav>
