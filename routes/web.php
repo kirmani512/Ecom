@@ -55,3 +55,7 @@ ROute::get('remove_cart/{id}',[HomeController::class,'remove_cart'])->middleware
 Route::post('confirm_order',[HomeController::class,'confirm_order'])->middleware('auth','verified');
 
 Route::get('view_orders',[AdminController::class,'view_orders'])->middleware('auth','admin');
+
+Route::get('in_transit/{id}',[AdminController::class,'in_transit'])->middleware('auth','admin');
+
+Route::get('deliver/{id}',[AdminController::class,'deliver'])->middleware('auth','admin');

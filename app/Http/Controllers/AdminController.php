@@ -105,8 +105,8 @@ class AdminController extends Controller
     public function update_product($id)
     {
         $data = Product::find($id);
-        $category=Category::all();
-        return view('admin.update_product', compact('data','category'));
+        $category = Category::all();
+        return view('admin.update_product', compact('data', 'category'));
     }
     public function edit_product(Request $request, $id)
     {
@@ -132,17 +132,36 @@ class AdminController extends Controller
     }
     public function product_search(Request $request)
     {
-        $search=$request->search;
+        $search = $request->search;
 
-        $product=Product::where('title','LIKE','%'.$search.'%')->orWhere('category','LIKE','%'.$search.'%')->paginate(3);
+        $product = Product::where('title', 'LIKE', '%' . $search . '%')->orWhere('category', 'LIKE', '%' . $search . '%')->paginate(3);
 
-        return view('admin.view_product',compact('product'));
+        return view('admin.view_product', compact('product'));
     }
 
     public function view_orders()
     {
-        $data=Order::all();
+        $data = Order::all();
 
-        return view('admin.order',compact('data'));
+        return view('admin.order', compact('data'));
+    }
+    public function in_transit($id)
+    {
+        $data = Order::find($id);
+        $data->status = 'In Transit';
+        $data->save();
+
+        return redirect('view_orders');
+    }
+
+    public function deliver($id)
+    {
+        $data=Order::find($id);
+
+        $data->status='Delivered';
+
+        $data->save();
+
+        return redirect('view_orders');
     }
 }
