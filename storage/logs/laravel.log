@@ -6325,3 +6325,7 @@ Did you mean one of these?
 #55 D:\\xampp\\htdocs\\ecommerce_project\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\xampp\\\\htdocs...')
 #56 {main}
 "} 
+[2024-08-16 20:51:05] local.ERROR: syntax error, unexpected identifier "imp", expecting "{" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected identifier \"imp\", expecting \"{\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\User.php:10)
+[stacktrace]
+#0 {main}
+"} 
