@@ -59,3 +59,5 @@ Route::get('view_orders',[AdminController::class,'view_orders'])->middleware('au
 Route::get('in_transit/{id}',[AdminController::class,'in_transit'])->middleware('auth','admin');
 
 Route::get('deliver/{id}',[AdminController::class,'deliver'])->middleware('auth','admin');
+
+Route::get('print_pdf/{id}',[AdminController::class,'print_pdf'])->middleware('auth','admin');

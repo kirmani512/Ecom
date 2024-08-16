@@ -63,6 +63,7 @@
                         <th>Image</th>
                         <th>Status</th>
                         <th>Change Status</th>
+                        <th>Print PDF</th>
 
 
                     </tr>
@@ -78,7 +79,7 @@
                             </td>
                             <td>
 
-                                @if($data->status == 'in progress')
+                                @if ($data->status == 'in progress')
                                     <span style="color: rgb(51, 219, 17)">{{ $data->status }}</span>
                                 @elseif($data->status == 'In Transit')
                                     <span style="color: rgb(177, 177, 221)">{{ $data->status }}</span>
@@ -92,7 +93,9 @@
                                 <a class="btn btn-success" href="{{ url('deliver', $data->id) }}">Delivered</a>
 
                             </td>
-
+                            <td>
+                                <a class="btn btn-secondary" href="{{ url('print_pdf', $data->id) }}">Print</a>
+                            </td>
 
                         </tr>
                     @endforeach
