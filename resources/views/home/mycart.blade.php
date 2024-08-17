@@ -62,34 +62,7 @@
     </div>
     <!-- end hero area -->
 
-
-
-
     <div class="div_deg">
-        <div class="order_deg">
-            <form action="{{url('confirm_order')}}" method="POST">
-                @csrf
-                <div class="div_gap">
-                    <label>Name</label>
-                    <input type="text" name="name" value="{{ Auth::user()->name }}">
-                </div>
-
-                <div class="div_gap">
-                    <label>Address</label>
-                    <textarea name="address">{{ Auth::user()->address }}</textarea>
-                </div>
-
-                <div class="div_gap">
-                    <label>Phone</label>
-                    <input type="text" name="phone" value="{{ Auth::user()->phone }}">
-                </div>
-
-                <div class="div_gap">
-                    <input class="btn btn-primary" type="submit" value="Place Order">
-                </div>
-            </form>
-        </div>
-
         <table>
             <tr>
                 <th>Product Title</th>
@@ -124,7 +97,31 @@
     <div class="cart_value">
         <h3>Your Order Amout : Rs {{ $value }}</h3>
     </div>
+    <div class="order_deg" style="display: flex; justify-content:center; align-items:center">
+        <form action="{{ url('confirm_order') }}" method="POST">
+            @csrf
+            <div class="div_gap">
+                <label>Name</label>
+                <input type="text" name="name" value="{{ Auth::user()->name }}">
+            </div>
 
+            <div class="div_gap">
+                <label>Address</label>
+                <textarea name="address">{{ Auth::user()->address }}</textarea>
+            </div>
+
+            <div class="div_gap">
+                <label>Phone</label>
+                <input type="text" name="phone" value="{{ Auth::user()->phone }}">
+            </div>
+
+            <div class="div_gap">
+                <input class="btn btn-primary" type="submit" value="Place Order">
+                <a class="btn btn-secondary" href="{{ url('stripe',$value) }}">Pay by Card</a>
+            </div>
+
+        </form>
+    </div>
 
 
 
