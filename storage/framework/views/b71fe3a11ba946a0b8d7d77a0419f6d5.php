@@ -37,6 +37,11 @@
             <div class="user_option">
                 <?php if(Route::has('login')): ?>
                     <?php if(auth()->guard()->check()): ?>
+                    
+                    <a href="<?php echo e(url('myorders')); ?>">
+                    My orders
+                    </a>
+
                     <a href="<?php echo e(url('mycart')); ?>">
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         <?php echo e($count); ?>
