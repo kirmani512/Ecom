@@ -7951,3 +7951,111 @@ Did you mean one of these?
 #66 D:\\xampp\\htdocs\\ecommerce_project\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\xampp\\\\htdocs...')
 #67 {main}
 "} 
+[2024-08-18 18:25:04] local.ERROR: syntax error, unexpected token "class", expecting "," or ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"class\", expecting \",\" or \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:25:06] local.ERROR: syntax error, unexpected token "class", expecting "," or ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"class\", expecting \",\" or \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:25:20] local.ERROR: syntax error, unexpected token "class", expecting "," or ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"class\", expecting \",\" or \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:25:25] local.ERROR: syntax error, unexpected token "class", expecting "," or ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"class\", expecting \",\" or \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:25:39] local.ERROR: syntax error, unexpected token "class", expecting "," or ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"class\", expecting \",\" or \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:25:52] local.ERROR: syntax error, unexpected token "class", expecting "," or ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"class\", expecting \",\" or \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:26:46] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:27:03] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:28:03] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:29:03] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:30:03] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:31:05] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:32:04] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:33:03] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:34:02] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:35:02] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:36:03] local.ERROR: Trait "Cviebrock\EloquentSluggable\Sluggable" not found {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Trait \"Cviebrock\\EloquentSluggable\\Sluggable\" not found at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:37:03] local.ERROR: Class App\Models\Product contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Models\Product::sluggable) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Class App\\Models\\Product contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Models\\Product::sluggable) at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:37:06] local.ERROR: Class App\Models\Product contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Models\Product::sluggable) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Class App\\Models\\Product contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Models\\Product::sluggable) at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:37:18] local.ERROR: Class App\Models\Product contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\Models\Product::sluggable) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Class App\\Models\\Product contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (App\\Models\\Product::sluggable) at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:10)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:38:04] local.ERROR: syntax error, unexpected token "}", expecting ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"}\", expecting \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:22)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:38:10] local.ERROR: syntax error, unexpected token "}", expecting ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"}\", expecting \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:22)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:38:40] local.ERROR: syntax error, unexpected token "}", expecting ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"}\", expecting \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:25)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:39:04] local.ERROR: syntax error, unexpected token "}", expecting ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"}\", expecting \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:25)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:39:15] local.ERROR: syntax error, unexpected token "}", expecting ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"}\", expecting \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:25)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:39:19] local.ERROR: syntax error, unexpected token "}", expecting ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"}\", expecting \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:25)
+[stacktrace]
+#0 {main}
+"} 
+[2024-08-18 18:40:06] local.ERROR: syntax error, unexpected token "}", expecting ";" {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): syntax error, unexpected token \"}\", expecting \";\" at D:\\xampp\\htdocs\\ecommerce_project\\app\\Models\\Product.php:25)
+[stacktrace]
+#0 {main}
+"} 
