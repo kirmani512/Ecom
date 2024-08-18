@@ -32,11 +32,6 @@
 
 
 
-    <!-- contact section -->
-
-  <?php echo $__env->make('home.contact', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-
-    <!-- end contact section -->
 
 
 
