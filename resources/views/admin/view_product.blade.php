@@ -37,6 +37,13 @@
         .container-fluid{
             padding: 20px;
         }
+        .pag_deg
+        {
+            margin: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -96,11 +103,12 @@
                         </tr>
                     @endforeach
                 </table>
-            </div>
-            <div class="div_deg">
-                {{ $product->onEachSide(1)->links() }}
+
             </div>
 
+            <div class="pag_deg">
+                {{ $product->onEachSide(1)->links() }}
+            </div>
 
 
             <footer class="footer">
