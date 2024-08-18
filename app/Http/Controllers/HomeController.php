@@ -41,6 +41,33 @@ class HomeController extends Controller
 
         return view('home.index', compact('product', 'count'));
     }
+
+    public function shop()
+    {
+        $product = Product::all();
+        if (Auth::id()) {
+            $user = Auth::user();
+
+            $userid = $user->id;
+
+            $count = Cart::where('user_id', $userid)->count();
+        } else {
+            $count = '';
+        }
+
+        return view('home.shop', compact('product', 'count'));
+    }
+
+    public function whyus()
+    {
+        return view('home.why');
+    }
+
+    public function contact()
+    {
+        return view('home.contact');
+    }
+
     public function login_home()
     {
         $product = Product::all();
@@ -153,13 +180,13 @@ class HomeController extends Controller
 
     public function myorders()
     {
-        $user=Auth::user()->id;
+        $user = Auth::user()->id;
 
-        $count=Cart::where('user_id',$user)->get()->count();
+        $count = Cart::where('user_id', $user)->get()->count();
 
-        $order=Order::where('user_id',$user)->get();
+        $order = Order::where('user_id', $user)->get();
 
-        return view('home.myorders',compact('count','order'));
+        return view('home.myorders', compact('count', 'order'));
     }
 
     public function stripe($value)

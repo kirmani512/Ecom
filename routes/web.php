@@ -48,6 +48,12 @@ Route::get('/', [HomeController::class, 'home']);
 
 ROute::get('product_details/{id}',[HomeController::class,'product_details']);
 
+ROute::get('shop',[HomeController::class,'shop']);
+
+ROute::get('why',[HomeController::class,'whyus']);
+
+ROute::get('contact',[HomeController::class,'contact']);
+
 ROute::get('add_cart/{id}',[HomeController::class,'add_cart'])->middleware('auth','verified');
 
 ROute::get('mycart',[HomeController::class,'mycart'])->middleware('auth','verified');

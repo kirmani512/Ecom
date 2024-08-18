@@ -16,28 +16,24 @@
                     <a class="nav-link" href="<?php echo e(url('/')); ?>">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="shop.html">
+                    <a class="nav-link" href="<?php echo e(url('shop')); ?>">
                         Shop
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="why.html">
+                    <a class="nav-link" href="<?php echo e(url('why')); ?>">
                         Why Us
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="testimonial.html">
-                        Testimonial
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact Us</a>
+                    <a class="nav-link" href="<?php echo e(url('contact')); ?>">Contact Us</a>
                 </li>
             </ul>
             <div class="user_option">
                 <?php if(Route::has('login')): ?>
                     <?php if(auth()->guard()->check()): ?>
-                    
+
                     <a href="<?php echo e(url('myorders')); ?>">
                     My orders
                     </a>
