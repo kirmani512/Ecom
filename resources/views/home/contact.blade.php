@@ -14,7 +14,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <title>
-    Giftos
+    Selling Yard
+
   </title>
 
   <!-- slider stylesheet -->

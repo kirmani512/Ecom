@@ -14,7 +14,8 @@
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
   <title>
-    Giftos
+    Selling Yard
+
   </title>
 
   <!-- slider stylesheet -->
@@ -53,7 +54,6 @@
         <div class="col-lg-7 col-md-6 px-0">
           <div class="map_container">
             <div class="map-responsive">
-              
               <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3404.8732939585093!2d74.29379077560745!3d31.41761687426119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDI1JzAzLjQiTiA3NMKwMTcnNDYuOSJF!5e0!3m2!1sen!2s!4v1723993464460!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
