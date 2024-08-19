@@ -36,6 +36,10 @@
         .input_deg {
             padding: 15px;
         }
+
+        .table_deg td {
+            padding: 20px;
+        }
     </style>
 </head>
 
@@ -55,40 +59,81 @@
                 </div>
             </div>
             <div class="div_deg">
-                <form action="{{url('upload_product')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('upload_product') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="input_deg">
-                        <label> Product Title</label>
-                        <input type="text" name="title" required>
-                    </div>
-                    <div>
-                        <label> Description</label>
-                        <textarea name="description" required></textarea>
-                    </div>
-                    <div class="input_deg">
-                        <label> Price</label>
-                        <input type="text" name="price" required>
-                    </div>
-                    <div class="input_deg">
-                        <label> Quantity</label>
-                        <input type="number" name="qty" required>
-                    </div>
-                    <div>
-                        <label> Product Category</label>
-                        <select name="category" required>
-                            <option>Select a Option</option>
-                            @foreach ($category as $category)
-                                <option value="{{ $category->category_name }}">{{ $category->category_name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="input_deg">
-                        <label> Product Image</label>
-                        <input type="file" name="image">
-                    </div>
-                    <div class="input_deg">
-                        <input class="btn btn-success" type="submit" value="Add Product">
-                    </div>
+                    <table class="table_deg">
+                        <tr>
+                            <td>
+                                {{-- <div class="input_deg"> --}}
+                                <label> Product Title</label>
+                            </td>
+                            <td>
+                                <input type="text" name="title" required>
+                            </td>
+                            {{-- </div> --}}
+                        </tr>
+                        <tr>
+                            {{-- <div> --}}
+                            <td>
+                                <label> Description</label>
+                            </td>
+                            <td>
+                                <textarea name="description" required></textarea>
+                            </td>
+                            {{-- </div> --}}
+                        </tr>
+                        <tr>
+                            {{-- <div class="input_deg"> --}}
+                            <td>
+                                <label> Price</label>
+                            </td>
+                            <td>
+                                <input type="text" name="price" required>
+                            </td>
+                            {{-- </div> --}}
+                        </tr>
+                        <tr>
+                            {{-- <div class="input_deg"> --}}
+                            <td>
+                                <label> Quantity</label>
+                            </td>
+                            <td>
+                                <input type="number" name="qty" required>
+                            </td>
+                            {{-- </div> --}}
+                        </tr>
+                        <tr>
+                            {{-- <div> --}}
+                            <td>
+                                <label> Product Category</label>
+                            </td>
+                            <td>
+                                <select name="category" required>
+                                    <option>Select a Option</option>
+                                    @foreach ($category as $category)
+                                        <option value="{{ $category->category_name }}">{{ $category->category_name }}
+                                        </option>
+                                    @endforeach
+                                </select>
+                            </td>
+                            {{-- </div> --}}
+                        </tr>
+                        <tr>
+                            <td>
+                                {{-- <div class="input_deg"> --}}
+                                <label> Product Image</label>
+                            </td>
+                            <td>
+                                <input type="file" name="image">
+                            </td>
+                            {{-- </div> --}}
+                            {{-- <div class="input_deg"> --}}
+                            <td>
+                                <input class="btn btn-success" type="submit" value="Add Product">
+                            </td>
+                            {{-- </div> --}}
+                        </tr>
+                    </table>
                 </form>
             </div>
             <footer class="footer">
