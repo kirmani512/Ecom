@@ -60,6 +60,8 @@ ROute::get('mycart',[HomeController::class,'mycart'])->middleware('auth','verifi
 
 ROute::get('remove_cart/{id}',[HomeController::class,'remove_cart'])->middleware('auth','verified');
 
+Route::post('/update_cart/{id}', [HomeController::class, 'update_cart_quantity'])->middleware('auth','verified');
+
 Route::post('confirm_order',[HomeController::class,'confirm_order'])->middleware('auth','verified');
 
 Route::get('view_orders',[AdminController::class,'view_orders'])->middleware('auth','admin');

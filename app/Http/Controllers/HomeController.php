@@ -166,6 +166,36 @@ class HomeController extends Controller
             }
         }
     }
+    public function update_cart_quantity(Request $request, $id)
+{
+    $cart_item = Cart::findOrFail($id);
+
+    // Validate the quantity
+    $request->validate([
+        'qty' => 'required|integer|min:1',
+    ]);
+
+    // Update the quantity in the cart
+    $cart_item->qty = $request->qty;
+    $cart_item->save();
+
+    // Calculate the new total for this item
+    $item_total = $cart_item->product->price * $cart_item->qty;
+
+    // Calculate the new overall total
+    $user_id = Auth::user()->id;
+    $cart = Cart::where('user_id', $user_id)->get();
+    $new_total = $cart->sum(function ($item) {
+        return $item->product->price * $item->qty;
+    });
+
+    // Return the updated values as a JSON response
+    return response()->json([
+        'item_total' => $item_total,
+        'new_total' => $new_total,
+        'product_price' => $cart_item->product->price
+    ]);
+}
     public function confirm_order(Request $request)
     {
         $name = $request->name;
@@ -176,15 +206,16 @@ class HomeController extends Controller
 
         $cart = Cart::where('user_id', $userid)->get();
 
-        foreach ($cart as $carts) {
+        foreach ($cart as $cart_item) {
             $order = new Order();
 
             $order->name = $name;
             $order->address = $address;
             $order->phone = $phone;
             $order->user_id = $userid;
-            $order->product_id = $carts->product_id;
-
+            $order->product_id = $cart_item->product_id;
+            $order->quantity = $cart_item->qty;
+            $order->total_price = $cart_item->product->price * $cart_item->qty;
             $order->save();
         }
         $cart_remove = Cart::where('user_id', $userid)->get();
