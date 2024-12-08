@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('orders', function (Blueprint $table) {
             $table->integer('qty')->after('product_id');
-            $table->integer('total');
+            $table->integer('total')->after('qty');
         });
     }
 

@@ -73,17 +73,17 @@
                 <th>Action</th>
 
             </tr>
+
             <?php
             $value = 0;
             ?>
             @foreach ($cart as $cart_item)
-
                 <tr>
                     <td>{{ $cart_item->product->title }}</td>
                     <td>{{ $cart_item->product->price }}</td>
                     <td>
-                        <input type="number" class="quantity" data-id="{{$cart_item->id}}" value="{{$cart_item->qty}}">
-                    </td>
+                        <input type="number" class="quantity" data-id="{{ $cart_item->id }}" value="{{ $cart_item->qty }}"
+                            </td>
                     <td class="item-total">{{ $cart_item->product->price * $cart_item->qty }}</td>
 
                     <td>
@@ -95,7 +95,7 @@
                 </tr>
 
                 <?php
-                $value = $value + ($cart_item->product->price*$cart_item->qty);
+                $value = $value + $cart_item->product->price * $cart_item->qty;
                 ?>
             @endforeach
 
@@ -125,7 +125,7 @@
 
             <div class="div_gap">
                 <input class="btn btn-primary" type="submit" value="Place Order">
-                <a class="btn btn-secondary" href="{{ url('stripe',$value) }}">Pay by Card</a>
+                <a class="btn btn-secondary" href="{{ url('stripe', $value) }}">Pay by Card</a>
             </div>
 
         </form>
@@ -145,10 +145,10 @@
 
     <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <script>
-        $(document).ready(function () {
+    {{-- <script>
+        $(document).ready(function() {
             // Attach event listener for quantity change
-            $('.quantity').on('change', function () {
+            $('.quantity').on('change', function() {
                 let $input = $(this); // Capture the input element
                 let cartItemId = $input.data('id'); // Get cart item ID
                 let quantity = $input.val(); // Get the new quantity value
@@ -168,21 +168,52 @@
                         _token: '{{ csrf_token() }}',
                         qty: quantity
                     },
-                    success: function (response) {
+                    success: function(response) {
                         // Update the item total
                         $input.closest('tr').find('.item-total').text(response.item_total);
 
                         // Update the overall cart total
                         $('#total-value').text(response.new_total);
                     },
-                    error: function () {
+                    error: function() {
+                        alert('Failed to update the cart. Please try again.');
+                    }
+                });
+            });
+        });
+    </script> --}}
+    <script>
+        $(document).ready(function() {
+            $('.quantity').on('change', function() {
+                let $input = $(this);
+                let cartItemId = $input.data('id');
+                let quantity = $input.val();
+
+                if (quantity < 1) {
+                    alert('Quantity must be at least 1');
+                    $input.val(1);
+                    return;
+                }
+                $.ajax({
+                    url: '/update_cart/' + cartItemId,
+                    method: 'POST',
+                    data: {
+                        _token: '{{ csrf_token() }}',
+                        qty: quantity
+
+                    },
+                    success: function(response) {
+                        $input.closest('tr').find('.item-total').text(response.item_total);
+
+                        $('#total-value').text(response.new_total)
+                    },
+                 error: function() {
                         alert('Failed to update the cart. Please try again.');
                     }
                 });
             });
         });
     </script>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="{{ asset('js/custom.js') }}"></script>

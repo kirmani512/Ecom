@@ -214,8 +214,8 @@ class HomeController extends Controller
             $order->phone = $phone;
             $order->user_id = $userid;
             $order->product_id = $cart_item->product_id;
-            $order->quantity = $cart_item->qty;
-            $order->total_price = $cart_item->product->price * $cart_item->qty;
+            $order->qty = $cart_item->qty;
+            $order->total= $cart_item->product->price * $cart_item->qty;
             $order->save();
         }
         $cart_remove = Cart::where('user_id', $userid)->get();
