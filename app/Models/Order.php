@@ -11,11 +11,17 @@ class Order extends Model
 
     public function user()
     {
-        return $this->hasOne('App\Models\User','id','user_id');
+        return $this->belongsTo(User::class);
+
     }
 
     public function product()
     {
-        return $this->hasOne('App\Models\Product','id','product_id');
+        return $this->hasMany(Product::class);
+    }
+
+    public function items()
+    {
+        return $this->hasMany(orderItems::class);
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -54,13 +55,13 @@ ROute::get('why',[HomeController::class,'whyus']);
 
 ROute::get('contact',[HomeController::class,'contact']);
 
-ROute::get('add_cart/{id}',[HomeController::class,'add_cart'])->middleware('auth','verified');
+ROute::get('add_cart/{id}',[CartController::class,'add_cart'])->middleware('auth','verified');
 
-ROute::get('mycart',[HomeController::class,'mycart'])->middleware('auth','verified');
+ROute::get('mycart',[CartController::class,'mycart'])->middleware('auth','verified');
 
-ROute::get('remove_cart/{id}',[HomeController::class,'remove_cart'])->middleware('auth','verified');
+ROute::get('remove_cart/{id}',[CartController::class,'remove_cart'])->middleware('auth','verified');
 
-Route::post('/update_cart/{id}', [HomeController::class, 'update_cart_quantity'])->middleware('auth','verified');
+Route::post('/update_cart/{id}', [CartController::class, 'update_cart_quantity'])->middleware('auth','verified');
 
 Route::post('confirm_order',[HomeController::class,'confirm_order'])->middleware('auth','verified');
 
