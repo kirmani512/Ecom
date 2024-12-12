@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\orderItems;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -87,7 +88,7 @@ class HomeController extends Controller
             $count = '';
         }
 
-        return view('home.contact', compact( 'count'));
+        return view('home.contact', compact('count'));
     }
 
     public function login_home()
@@ -122,7 +123,7 @@ class HomeController extends Controller
 
         return view('home.product_details', compact('data', 'count'));
     }
-    
+
     public function confirm_order(Request $request)
     {
         $name = $request->name;
@@ -131,28 +132,29 @@ class HomeController extends Controller
 
         $userid = Auth::user()->id;
 
+
+
+        $order = new Order();
+
+        $order->name = $name;
+        $order->address = $address;
+        $order->phone = $phone;
+        $order->user_id = $userid;
+        $order->status = 'in progress';
+        $order->save();
+
         $cart = Cart::where('user_id', $userid)->get();
+        foreach ($cart as $cartItem) {
+            $orderItem = new orderItems();
+            $orderItem->order_id = $order->id;
+            $orderItem->product_id = $cartItem->product_id;
+            $orderItem->qty = $cartItem->qty;
+            $orderItem->total = $cartItem->product->price * $cartItem->qty;
 
-        foreach ($cart as $cart_item) {
-            $order = new Order();
-
-            $order->name = $name;
-            $order->address = $address;
-            $order->phone = $phone;
-            $order->user_id = $userid;
-            $order->product_id = $cart_item->product_id;
-            $order->qty = $cart_item->qty;
-            $order->total= $cart_item->product->price * $cart_item->qty;
-            $order->save();
+            $orderItem->save();
         }
-        $cart_remove = Cart::where('user_id', $userid)->get();
+        Cart::where('user_id', $userid)->delete();
 
-        foreach ($cart_remove as $remove) {
-
-            $data = Cart::find($remove->id);
-
-            $data->delete();
-        }
 
         toastr()->timeOut(5000)->closeButton()->success('Order Has been placed Successfully');
         return redirect()->back();
@@ -162,9 +164,10 @@ class HomeController extends Controller
     {
         $user = Auth::user()->id;
 
-        $count = Cart::where('user_id', $user)->get()->count();
+        // $count = Cart::where('user_id', $user)->get()->count();
 
-        $order = Order::where('user_id', $user)->get();
+        // $order = Order::where('user_id', $user)->get();
+        $orders = Order::with('items.product')->where('user_id', $user)->get();
 
         return view('home.myorders', compact('count', 'order'));
     }
