@@ -164,12 +164,14 @@ class HomeController extends Controller
     {
         $user = Auth::user()->id;
 
-        // $count = Cart::where('user_id', $user)->get()->count();
+        $count = Cart::where('user_id', $user)->get()->count();
 
         // $order = Order::where('user_id', $user)->get();
-        $orders = Order::with('items.product')->where('user_id', $user)->get();
+        $order = Order::with('items.product')->where('user_id', $user)->get();
 
-        return view('home.myorders', compact('count', 'order'));
+
+
+        return view('home.myorders', compact('order','count'));
     }
 
     public function stripe($value)

@@ -53,17 +53,18 @@
 
                 </tr>
                 @foreach ($order as $order)
-                    <tr>
-                        <td>{{ $order->product->title }}</td>
-                        <td>{{ $order->product->price }}</td>
-                        <td>{{ $order->status }}</td>
-                        <td>
-                            <img height="140" width="200" src="products/{{ $order->product->image }}">
-                        </td>
+                    @foreach ($order->items as $item)
+                        <tr>
+                            <td>{{ $item->product->title }}</td>
+                            <td>{{ $item->product->price }}</td>
+                            <td>{{ $order->status }}</td>
+                            <td>
+                                <img height="140" width="200" src="products/{{ $item->product->image }}">
+                            </td>
 
-                    </tr>
+                        </tr>
+                    @endforeach
                 @endforeach
-
             </table>
         </div>
     </div>
