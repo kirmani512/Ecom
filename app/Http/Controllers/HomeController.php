@@ -166,7 +166,6 @@ class HomeController extends Controller
 
         $count = Cart::where('user_id', $user)->get()->count();
 
-        // $order = Order::where('user_id', $user)->get();
         $order = Order::with('items.product')->where('user_id', $user)->get();
 
 

@@ -23,11 +23,6 @@ protected $fillable=[
 
     }
 
-    // public function product()
-    // {
-    //     return $this->hasMany(Product::class);
-    // }
-
     public function items()
     {
         return $this->hasMany(orderItems::class,'order_id');

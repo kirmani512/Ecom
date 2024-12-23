@@ -142,7 +142,7 @@ class AdminController extends Controller
 
     public function view_orders()
     {
-        $data = Order::all();
+        $data = Order::with('items.product')->get();
 
         return view('admin.order', compact('data'));
     }
