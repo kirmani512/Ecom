@@ -10,7 +10,7 @@
 <body>
     <div class="hero_area">
         <!-- header section strats -->
-        @include('home.header')
+        @include('home.layout.header')
         <!-- end header section -->
         <x-guest-layout>
             <!-- Session Status -->
@@ -60,7 +60,6 @@
                 </div>
             </form>
         </x-guest-layout>
-
 
 
 

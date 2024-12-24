@@ -56,7 +56,7 @@
 <body>
     <div class="hero_area">
         <!-- header section strats -->
-        @include('home.header')
+        @include('home.layout.header')
         <!-- end header section -->
 
     </div>
@@ -138,7 +138,7 @@
 
     <!-- info section -->
 
-    @include('home.footer')
+    @include('home.layout.footer')
 
     <!-- end info section -->
 

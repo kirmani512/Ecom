@@ -10,7 +10,7 @@
 <body>
     <div class="hero_area">
         <!-- header section strats -->
-        @include('home.header')
+        @include('home.layout.header')
         <!-- end header section -->
 
     </div>
@@ -22,7 +22,7 @@
 
     <!-- end shop section -->
 
-
+@include('home.layout.footer')
 
 
 
