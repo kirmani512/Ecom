@@ -42,12 +42,12 @@
 
 <body>
 
-    <?php echo $__env->make('admin.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('admin.layout.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        <?php echo $__env->make('admin.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('admin.layout.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <div class="page-header">
@@ -79,7 +79,7 @@
                             <td>
                                 <a class="btn btn-danger" onclick="confirmation(event)"
                                     href="<?php echo e(url('delete_category', $category->id)); ?>">Delete</a>
-                                    <a class="btn btn-success" href="<?php echo e(url('edit_category',$category->id)); ?>">Edit</a>
+                                <a class="btn btn-success" href="<?php echo e(url('edit_category', $category->id)); ?>">Edit</a>
 
                             </td>
 
@@ -87,6 +87,7 @@
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </table>
             </div>
+            <?php echo $__env->make('admin.layout.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </div>
         <!-- JavaScript files-->
         <script type="text/javascript">

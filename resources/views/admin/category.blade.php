@@ -42,12 +42,12 @@
 
 <body>
 
-    @include('admin.header')
+    @include('admin.layout.header')
 
 
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        @include('admin.sidebar')
+        @include('admin.layout.sidebar')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <div class="page-header">
@@ -79,7 +79,7 @@
                             <td>
                                 <a class="btn btn-danger" onclick="confirmation(event)"
                                     href="{{ url('delete_category', $category->id) }}">Delete</a>
-                                    <a class="btn btn-success" href="{{url('edit_category',$category->id)}}">Edit</a>
+                                <a class="btn btn-success" href="{{ url('edit_category', $category->id) }}">Edit</a>
 
                             </td>
 
@@ -87,6 +87,7 @@
                     @endforeach
                 </table>
             </div>
+            @include('admin.layout.footer')
         </div>
         <!-- JavaScript files-->
         <script type="text/javascript">

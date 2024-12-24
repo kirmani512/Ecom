@@ -45,12 +45,12 @@
 
 <body>
 
-    @include('admin.header')
+    @include('admin.layout.header')
 
 
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        @include('admin.sidebar')
+        @include('admin.layout.sidebar')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <div class="page-header">
@@ -136,15 +136,7 @@
                     </table>
                 </form>
             </div>
-            <footer class="footer">
-                <div class="footer__block block no-margin-bottom">
-                    <div class="container-fluid text-center">
-                        <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        <p class="no-margin-bottom">2018 &copy; Developed By <a target="_blank"
-                            href="">Raza Kirmani</a>.</p>
-                    </div>
-                </div>
-            </footer>
+@include('admin.layout.footer')
         </div>
     </div>
     <!-- JavaScript files-->

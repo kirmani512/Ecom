@@ -21,18 +21,18 @@
 
 <body>
 
-    <?php echo $__env->make('admin.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php echo $__env->make('admin.layout.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
 
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        <?php echo $__env->make('admin.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+        <?php echo $__env->make('admin.layout.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <h1 style="color: white">Edit Category</h1>
 
             <div class="div_deg">
-                <form action="<?php echo e(url('update_category',$data->id)); ?>" method="POST">
+                <form action="<?php echo e(url('update_category', $data->id)); ?>" method="POST">
                     <?php echo csrf_field(); ?>
                     <input type="text" name="category" value="<?php echo e($data->category_name); ?>">
                     <input class="btn btn-primary" type="submit" value="Update Category">
@@ -42,15 +42,7 @@
 
 
 
-            <footer class="footer">
-                <div class="footer__block block no-margin-bottom">
-                    <div class="container-fluid text-center">
-                        <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        <p class="no-margin-bottom">2018 &copy; Your company. Download From <a target="_blank"
-                                href="https://templateshub.net">Templates Hub</a>.</p>
-                    </div>
-                </div>
-            </footer>
+            <?php echo $__env->make('admin.layout.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         </div>
     </div>
     <!-- JavaScript files-->

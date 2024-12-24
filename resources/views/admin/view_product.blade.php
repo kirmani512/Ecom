@@ -28,17 +28,18 @@
             text-align: center;
             color: white;
         }
-        input[type='search']
-        {
+
+        input[type='search'] {
             width: 500px;
             height: 60px;
             margin-left: 50px;
         }
-        .container-fluid{
+
+        .container-fluid {
             padding: 20px;
         }
-        .pag_deg
-        {
+
+        .pag_deg {
             margin: 50px;
             display: flex;
             justify-content: center;
@@ -48,20 +49,17 @@
 </head>
 
 <body>
-
-    @include('admin.header')
-
-
+    @include('admin.layout.header')
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        @include('admin.sidebar')
+        @include('admin.layout.sidebar')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <div class="page-header">
                 <div class="container-fluid">
                     <h2 class="h5 no-margin-bottom">All Products</h2>
                 </div>
-                <form action="{{url('product_search')}}" method="GET">
+                <form action="{{ url('product_search') }}" method="GET">
                     @csrf
                     <input type="search" name="search">
                     <input class="btn btn-secondary" type="submit" value="SEARCH">
@@ -93,7 +91,7 @@
                                 <img height="120" width="120" src="products/{{ $products->image }}">
                             </td>
                             <td>
-                                <a class="btn btn-success" href="{{url('update_product',$products->slug)}}">Edit</a>
+                                <a class="btn btn-success" href="{{ url('update_product', $products->slug) }}">Edit</a>
                             </td>
                             <td>
                                 <a class="btn btn-danger" onclick="confirmation(event)"
@@ -110,16 +108,7 @@
                 {{ $product->onEachSide(1)->links() }}
             </div>
 
-
-            <footer class="footer">
-                <div class="footer__block block no-margin-bottom">
-                    <div class="container-fluid text-center">
-                        <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        <p class="no-margin-bottom">2018 &copy; Developed By <a target="_blank"
-                            href="">Raza Kirmani</a>.</p>
-                    </div>
-                </div>
-            </footer>
+            @include('admin.layout.footer')
         </div>
     </div>
 

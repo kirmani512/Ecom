@@ -7,12 +7,12 @@
 
 <body>
 
-    @include('admin.header')
+    @include('admin.layout.header')
 
 
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        @include('admin.sidebar')
+        @include('admin.layout.sidebar')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <div class="page-header">
@@ -47,7 +47,7 @@
                                         <div class="icon"><i class="icon-contract"></i></div><strong>All
                                             Products</strong>
                                     </div>
-                                    <div class="number dashtext-2">{{$product}}</div>
+                                    <div class="number dashtext-2">{{ $product }}</div>
                                 </div>
                                 <div class="progress progress-template">
                                     <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
@@ -62,7 +62,7 @@
                                         <div class="icon"><i class="icon-paper-and-pencil"></i></div><strong>ALL
                                             Orders</strong>
                                     </div>
-                                    <div class="number dashtext-3">{{$order}}</div>
+                                    <div class="number dashtext-3">{{ $order }}</div>
                                 </div>
                                 <div class="progress progress-template">
                                     <div role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0"
@@ -77,7 +77,7 @@
                                         <div class="icon"><i class="icon-writing-whiteboard"></i></div><strong>
                                             Delivered</strong>
                                     </div>
-                                    <div class="number dashtext-4">{{$delivered}}</div>
+                                    <div class="number dashtext-4">{{ $delivered }}</div>
                                 </div>
                                 <div class="progress progress-template">
                                     <div role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0"
@@ -89,19 +89,7 @@
                 </div>
             </section>
 
-
-
-
-
-            <footer class="footer">
-                <div class="footer__block block no-margin-bottom">
-                    <div class="container-fluid text-center">
-                        <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        <p class="no-margin-bottom">2018 &copy; Developed By <a target="_blank"
-                                href="">Raza Kirmani</a>.</p>
-                    </div>
-                </div>
-            </footer>
+            @include('admin.layout.footer')
         </div>
     </div>
     <!-- JavaScript files-->

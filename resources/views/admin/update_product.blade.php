@@ -31,12 +31,12 @@
 
 <body>
 
-    @include('admin.header')
+    @include('admin.layout.header')
 
 
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        @include('admin.sidebar')
+        @include('admin.layout.sidebar')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <div class="page-header">
@@ -47,7 +47,7 @@
 
 
             <div class="div_deg">
-                <form action="{{url('edit_product',$data->id)}}" method="POST" enctype="multipart/form-data">
+                <form action="{{ url('edit_product', $data->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div>
                         <label>Title</label>
@@ -70,8 +70,7 @@
                         <select name="category">
                             <option value="{{ $data->category }}">{{ $data->category }}</option>
                             @foreach ($category as $category)
-                            <option value="{{ $category->category_name }}">{{ $category->category_name }}</option>
-
+                                <option value="{{ $category->category_name }}">{{ $category->category_name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -89,15 +88,7 @@
                 </form>
             </div>
 
-            <footer class="footer">
-                <div class="footer__block block no-margin-bottom">
-                    <div class="container-fluid text-center">
-                        <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        <p class="no-margin-bottom">2018 &copy; Developed By <a target="_blank"
-                            href="">Raza Kirmani</a>.</p>
-                    </div>
-                </div>
-            </footer>
+            @include('admin.layout.footer')
         </div>
     </div>
     <!-- JavaScript files-->

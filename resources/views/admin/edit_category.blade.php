@@ -21,18 +21,18 @@
 
 <body>
 
-    @include('admin.header')
+    @include('admin.layout.header')
 
 
     <div class="d-flex align-items-stretch">
         <!-- Sidebar Navigation-->
-        @include('admin.sidebar')
+        @include('admin.layout.sidebar')
         <!-- Sidebar Navigation end-->
         <div class="page-content">
             <h1 style="color: white">Edit Category</h1>
 
             <div class="div_deg">
-                <form action="{{url('update_category',$data->id)}}" method="POST">
+                <form action="{{ url('update_category', $data->id) }}" method="POST">
                     @csrf
                     <input type="text" name="category" value="{{ $data->category_name }}">
                     <input class="btn btn-primary" type="submit" value="Update Category">
@@ -42,15 +42,7 @@
 
 
 
-            <footer class="footer">
-                <div class="footer__block block no-margin-bottom">
-                    <div class="container-fluid text-center">
-                        <!-- Please do not remove the backlink to us unless you support us at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
-                        <p class="no-margin-bottom">2018 &copy; Your company. Download From <a target="_blank"
-                                href="https://templateshub.net">Templates Hub</a>.</p>
-                    </div>
-                </div>
-            </footer>
+            @include('admin.layout.footer')
         </div>
     </div>
     <!-- JavaScript files-->
