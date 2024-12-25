@@ -3,14 +3,14 @@
 
 <head>
 
-    @include('home.css')
+    @include('home.layout.css')
 
 </head>
 
 <body>
     <div class="hero_area">
         <!-- header section strats -->
-        @include('home.header')
+        @include('home.layout.header')
         <!-- end header section -->
         <!-- slider section -->
 

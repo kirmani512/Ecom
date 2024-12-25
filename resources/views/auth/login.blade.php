@@ -3,7 +3,7 @@
 
 <head>
 
-    @include('home.css')
+    @include('home.layout.css')
 
 </head>
 

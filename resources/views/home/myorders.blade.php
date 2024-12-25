@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Orders List</title>
-    @include('home.css')
-    <style type="text/css">
+    @include('home.layout.css')
+    {{-- <style type="text/css">
         .div_center {
             display: flex;
             justify-content: center;
@@ -34,7 +34,7 @@
             border: 1px solid skyblue;
             padding: 10px;
         }
-    </style>
+    </style> --}}
 </head>
 
 <body>

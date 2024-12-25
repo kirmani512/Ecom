@@ -3,7 +3,7 @@
 
 <head>
 
-    @include('home.css')
+    @include('home.layout.css')
 
     <style type="text/css">
         .div_center {
@@ -11,10 +11,14 @@
             justify-content: center;
             align-items: center;
             padding: 30px;
+
         }
 
         .detail-box {
             padding: 15px;
+            background-color: rgb(135, 204, 231);
+          text-align: center;
+
         }
     </style>
 
@@ -44,7 +48,7 @@
                         </div>
                         <div class="detail-box">
                             <h6>Title:{{ $data->title }}</h6>
-                            <h6>Price
+                            <h6>Price:
                                 <span> {{ $data->price }}</span>
                             </h6>
                         </div>

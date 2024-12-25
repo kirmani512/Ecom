@@ -3,7 +3,7 @@
 
 <head>
 
-    @include('home.css')
+    @include('home.layout.css')
     <style type="text/css">
         .div_deg {
             display: flex;
