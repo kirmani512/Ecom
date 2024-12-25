@@ -7,34 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Orders List</title>
     @include('home.layout.css')
-    {{-- <style type="text/css">
-        .div_center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 60px;
-        }
 
-        table {
-            border: 2px solid black;
-            text-align: center;
-            width: 800px;
-        }
-
-        th {
-            border: 2px solid skyblue;
-            background-color: rgb(70, 68, 68);
-            color: white;
-            font-size: 19px;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        td {
-            border: 1px solid skyblue;
-            padding: 10px;
-        }
-    </style> --}}
 </head>
 
 <body>

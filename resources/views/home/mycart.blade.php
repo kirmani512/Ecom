@@ -4,53 +4,7 @@
 <head>
 
     @include('home.layout.css')
-    <style type="text/css">
-        .div_deg {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 60px;
-        }
 
-        table {
-            border: 2px solid black;
-            text-align: center;
-            width: 800px;
-        }
-
-        th {
-            border: 2px solid black;
-            text-align: center;
-            color: white;
-            font: 20px;
-            font-weight: bold;
-            background-color: black;
-        }
-
-        td {
-            border: 1px solid skyblue;
-        }
-
-        .cart_value {
-            text-align: center;
-            margin-bottom: 70px;
-            padding: -18px;
-        }
-
-        .order_deg {
-            padding-right: 100px;
-            margin-top: 10px;
-        }
-
-        label {
-            display: inline-block;
-            width: 70px;
-        }
-
-        .div_gap {
-            padding: 20px;
-        }
-    </style>
 </head>
 
 <body>

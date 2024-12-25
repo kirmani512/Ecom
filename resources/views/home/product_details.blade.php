@@ -5,23 +5,6 @@
 
     @include('home.layout.css')
 
-    <style type="text/css">
-        .div_center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 30px;
-
-        }
-
-        .detail-box {
-            padding: 15px;
-            background-color: rgb(135, 204, 231);
-          text-align: center;
-
-        }
-    </style>
-
 </head>
 
 <body>

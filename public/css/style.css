@@ -854,3 +854,95 @@ a:focus {
 
 /* end footer section*/
 /*# sourceMappingURL=style.css.map */
+
+/*My orders page style*/
+.div_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+table {
+    border: 2px solid black;
+    text-align: center;
+    width: 800px;
+}
+
+th {
+    border: 2px solid skyblue;
+    background-color: rgb(70, 68, 68);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    border: 1px solid skyblue;
+    padding: 10px;
+}
+
+/*My Cart page style*/
+.div_deg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px;
+}
+
+table {
+    border: 2px solid black;
+    text-align: center;
+    width: 800px;
+}
+
+th {
+    border: 2px solid black;
+    text-align: center;
+    color: white;
+    font: 20px;
+    font-weight: bold;
+    background-color: black;
+}
+
+td {
+    border: 1px solid skyblue;
+}
+
+.cart_value {
+    text-align: center;
+    margin-bottom: 70px;
+    padding: -18px;
+}
+
+.order_deg {
+    padding-right: 100px;
+    margin-top: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 70px;
+}
+
+.div_gap {
+    padding: 20px;
+}
+
+/*Product details style*/
+
+.div_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.detail-box {
+    padding: 15px;
+    background-color: rgb(135, 204, 231);
+  text-align: center;
+
+}
